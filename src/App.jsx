@@ -16,6 +16,7 @@ function App() {
         <Route path='/terms-of-service' element={<TermsOfService />} />
         <Route path='*' element={<UnderMaintanence />} />
 
+
       </Routes>
       <Footer />
     </BrowserRouter>
