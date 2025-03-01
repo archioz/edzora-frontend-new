@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Shield } from 'lucide-react';
 
 const PrivacyPolicy = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="min-vh-100 d-flex flex-column">
 
@@ -12,136 +17,67 @@ const PrivacyPolicy = () => {
                             <div className="text-center mb-5">
                                 <Shield className="text-primary mb-4" size={64} />
                                 <h1 className="display-5 fw-bold mb-4">Privacy Policy</h1>
-                                <p className="lead text-secondary">Last updated: June 15, 2025</p>
+                                <p className="lead text-secondary">Effective Date: 01-03-2025</p>
                             </div>
 
                             <div className="card border-0 custom-shadow p-4 p-md-5">
                                 <div className="policy-content">
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">1. Introduction</h2>
-                                        <p>
-                                            At DigitalMarket, we respect your privacy and are committed to protecting your personal data.
-                                            This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
-                                            you visit our website and use our services.
-                                        </p>
-                                        <p>
-                                            Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy,
-                                            please do not access the site or use our services.
-                                        </p>
-                                    </section>
-
-                                    <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">2. Information We Collect</h2>
-                                        <h3 className="h5 fw-bold mb-3">2.1 Personal Data</h3>
-                                        <p>
-                                            We may collect personal identification information, including but not limited to:
-                                        </p>
-                                        <ul className="mb-4">
-                                            <li>Name</li>
-                                            <li>Email address</li>
-                                            <li>Phone number</li>
-                                            <li>Billing address</li>
-                                            <li>Payment information</li>
-                                            <li>User account details</li>
-                                        </ul>
-
-                                        <h3 className="h5 fw-bold mb-3">2.2 Usage Data</h3>
-                                        <p>
-                                            We may also collect information on how the website is accessed and used. This usage data may include:
-                                        </p>
+                                        <h2 className="h3 fw-bold mb-4">1. Information We Collect</h2>
+                                        <p>We collect the following types of information:</p>
                                         <ul>
-                                            <li>Your computer's Internet Protocol (IP) address</li>
-                                            <li>Browser type and version</li>
-                                            <li>Pages of our website that you visit</li>
-                                            <li>Time and date of your visit</li>
-                                            <li>Time spent on those pages</li>
-                                            <li>Other diagnostic data</li>
+                                            <li><strong>Personal Information:</strong> Name, email address, and other details when you register on our site.</li>
+                                            <li><strong>Transaction Information:</strong> If and when we integrate a payment gateway, we will update this section accordingly.</li>
+                                            <li><strong>Technical Data:</strong> IP address, browser type, and usage data to improve our services.</li>
                                         </ul>
                                     </section>
 
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">3. How We Use Your Information</h2>
-                                        <p>We may use the information we collect for various purposes, including:</p>
+                                        <h2 className="h3 fw-bold mb-4">2. How We Use Your Information</h2>
+                                        <p>We use your information to:</p>
                                         <ul>
-                                            <li>To provide and maintain our service</li>
-                                            <li>To notify you about changes to our service</li>
-                                            <li>To allow you to participate in interactive features of our service</li>
-                                            <li>To provide customer support</li>
-                                            <li>To gather analysis or valuable information to improve our service</li>
-                                            <li>To monitor the usage of our service</li>
-                                            <li>To detect, prevent, and address technical issues</li>
-                                            <li>To fulfill any other purpose for which you provide it</li>
+                                            <li>Provide access to digital products and services.</li>
+                                            <li>Improve our services and customer experience.</li>
+                                            <li>Comply with legal and regulatory obligations.</li>
                                         </ul>
+                                    </section>
+
+                                    <section className="mb-5">
+                                        <h2 className="h3 fw-bold mb-4">3. Payment Processing (Upcoming)</h2>
+                                        <p>We have applied for a payment gateway integration and will update this section once it is approved. Until then, we do not collect or process payment information.</p>
                                     </section>
 
                                     <section className="mb-5">
                                         <h2 className="h3 fw-bold mb-4">4. Data Security</h2>
-                                        <p>
-                                            The security of your data is important to us, but remember that no method of transmission over
-                                            the Internet or method of electronic storage is 100% secure. While we strive to use commercially
-                                            acceptable means to protect your personal data, we cannot guarantee its absolute security.
-                                        </p>
+                                        <p>We implement security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
                                     </section>
 
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">5. Third-Party Services</h2>
-                                        <p>
-                                            We may employ third-party companies and individuals to facilitate our service, provide the service
-                                            on our behalf, perform service-related services, or assist us in analyzing how our service is used.
-                                        </p>
-                                        <p>
-                                            These third parties have access to your personal data only to perform these tasks on our behalf
-                                            and are obligated not to disclose or use it for any other purpose.
-                                        </p>
+                                        <h2 className="h3 fw-bold mb-4">5. Sharing Your Information</h2>
+                                        <p>We do not sell, trade, or rent your personal information. We may share data with service providers who help us operate our business.</p>
                                     </section>
 
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">6. Your Data Protection Rights</h2>
-                                        <p>
-                                            Depending on your location, you may have certain rights regarding your personal data, including:
-                                        </p>
-                                        <ul>
-                                            <li>The right to access, update, or delete your information</li>
-                                            <li>The right of rectification</li>
-                                            <li>The right to object</li>
-                                            <li>The right of restriction</li>
-                                            <li>The right to data portability</li>
-                                            <li>The right to withdraw consent</li>
-                                        </ul>
+                                        <h2 className="h3 fw-bold mb-4">6. Your Rights</h2>
+                                        <p>You have the right to access, modify, or delete your personal data by contacting us at edzoraofficial@gmail.com.</p>
                                     </section>
 
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">7. Cookies Policy</h2>
-                                        <p>
-                                            We use cookies and similar tracking technologies to track activity on our service and hold certain information.
-                                        </p>
-                                        <p>
-                                            Cookies are files with a small amount of data which may include an anonymous unique identifier.
-                                            You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
-                                        </p>
+                                        <h2 className="h3 fw-bold mb-4">7. Cookies</h2>
+                                        <p>We use cookies to enhance your experience. You can disable cookies in your browser settings.</p>
                                     </section>
 
                                     <section className="mb-5">
-                                        <h2 className="h3 fw-bold mb-4">8. Changes to This Privacy Policy</h2>
-                                        <p>
-                                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting
-                                            the new Privacy Policy on this page and updating the "Last updated" date.
-                                        </p>
-                                        <p>
-                                            You are advised to review this Privacy Policy periodically for any changes. Changes to this
-                                            Privacy Policy are effective when they are posted on this page.
-                                        </p>
+                                        <h2 className="h3 fw-bold mb-4">8. Changes to This Policy</h2>
+                                        <p>We may update this policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
                                     </section>
 
                                     <section>
                                         <h2 className="h3 fw-bold mb-4">9. Contact Us</h2>
-                                        <p>
-                                            If you have any questions about this Privacy Policy, please contact us:
-                                        </p>
+                                        <p>For any questions regarding this Privacy Policy, please contact us at:</p>
                                         <ul>
-                                            <li>By email: privacy@digitalmarket.com</li>
-                                            <li>By phone: +1 (555) 123-4567</li>
-                                            <li>By mail: 1234 Market St., San Francisco, CA 94103</li>
+                                            <li><strong>Email:</strong> edzoraofficial@gmail.com</li>
+                                            <li><strong>Website:</strong> www.edzora.com</li>
                                         </ul>
                                     </section>
                                 </div>

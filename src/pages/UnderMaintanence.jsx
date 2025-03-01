@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Settings, Clock, AlertTriangle } from 'lucide-react';
 
 const UnderMaintanence = () => {
+
+    useEffect(() => {
+
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light">

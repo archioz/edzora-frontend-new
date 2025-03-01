@@ -19,8 +19,26 @@ import {
     faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
 import Header from '../Layout/Header'
+import { useNavigate } from 'react-router-dom'
+
+import imageOne from '../assets/one.png'
+import imageTwo from '../assets/two.png'
+import imageThree from '../assets/three.png'
+import imageFour from '../assets/five.png'
+import imageFive from '../assets/six.png'
+import imageSix from '../assets/seven.png'
+import imageSeven from '../assets/eight.png'
+import imageEight from '../assets/four.png'
+import { useEffect } from 'react'
 
 function Landing() {
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             {/* Navigation */}
@@ -33,10 +51,10 @@ function Landing() {
                             <h1>Transform Your Digital Workflow</h1>
                             <p className="lead mb-4">Discover premium digital products that streamline your work process and boost productivity in the modern digital age.</p>
                             <div className="d-flex gap-3">
-                                <Button size="lg" className="btn-primary">
+                                <Button size="lg" className="btn-primary" onClick={() => navigate('/products')}>
                                     Browse Products <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                                 </Button>
-                                <Button size="lg" variant="light">Learn More</Button>
+                                <Button size="lg" variant="light" onClick={() => navigate('/learn')}> Learn More</Button>
                             </div>
                             <div className="hero-stats">
                                 <div className="hero-stat">
@@ -62,10 +80,10 @@ function Landing() {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section >
 
             {/* Products Section */}
-            <section className="section-padding bg-light" id="products">
+            < section className="section-padding bg-light" id="products" >
                 <Container>
                     <h2 className="section-title">Featured Products</h2>
                     <p className="section-subtitle">Explore our collection of premium digital products designed for modern professionals</p>
@@ -74,71 +92,86 @@ function Landing() {
                             {
                                 title: 'Photoshop Render Course',
                                 price: '499',
-                                image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
+                                image: imageOne,
                                 rating: 4.8,
                                 reviews: 2456,
-                                badge: 'Best Seller'
-                            },
-                            {
-                                title: 'Lumion Exterior Render',
-                                price: '799',
-                                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-                                rating: 4.9,
-                                reviews: 1832,
-                                badge: 'New'
-                            },
-                            {
-                                title: 'Autocad Beginner Tutorial',
-                                price: '199',
-                                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-                                rating: 4.7,
-                                reviews: 3218,
-                                badge: 'Popular'
-                            },
-                            {
-                                title: 'Master 3DS Max Software',
-                                price: '1499',
-                                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-                                rating: 4.9,
-                                reviews: 1567,
-                                badge: 'Featured'
+                                badge: 'Best Seller',
+                                author: "Archioz"
                             },
                             {
                                 title: 'React JS Master Course',
                                 price: '349',
-                                image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
+                                image: imageFive,
                                 rating: 4.8,
                                 reviews: 2456,
-                                badge: 'Best Seller'
-                            },
-                            {
-                                title: 'Python Beginner Course',
-                                price: '499',
-                                image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-                                rating: 4.9,
-                                reviews: 1832,
-                                badge: 'New'
-                            },
-                            {
-                                title: '10 Javascript Projects',
-                                price: '149',
-                                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-                                rating: 4.7,
-                                reviews: 3218,
-                                badge: 'Popular'
+                                badge: 'Best Seller',
+                                author: "Codify"
+
                             },
                             {
                                 title: 'Textures and 299',
                                 price: '399',
-                                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+                                image: imageEight,
                                 rating: 4.9,
                                 reviews: 1567,
-                                badge: 'Featured'
-                            }
+                                badge: 'Featured',
+                                author: "Archioz"
+
+                            },
+                            {
+                                title: 'Python Beginner Course',
+                                price: '499',
+                                image: imageSix,
+                                rating: 4.9,
+                                reviews: 1832,
+                                badge: 'New',
+                                author: "Codify"
+
+                            },
+                            {
+                                title: 'Autocad Beginner Tutorial',
+                                price: '199',
+                                image: imageThree,
+                                rating: 4.7,
+                                reviews: 3218,
+                                badge: 'Popular',
+                                author: "Archioz"
+
+                            },
+                            {
+                                title: '10 Javascript Projects',
+                                price: '149',
+                                image: imageSeven,
+                                rating: 4.7,
+                                reviews: 3218,
+                                badge: 'Popular',
+                                author: "Codify"
+
+                            },
+                            {
+                                title: 'Master 3DS Max Software',
+                                price: '1499',
+                                image: imageFour,
+                                rating: 4.9,
+                                reviews: 1567,
+                                badge: 'Featured',
+                                author: "Archioz"
+
+                            },
+
+                            {
+                                title: 'Lumion Exterior Render',
+                                price: '799',
+                                image: imageTwo,
+                                rating: 4.9,
+                                reviews: 1832,
+                                badge: 'New',
+                                author: "Archioz"
+                            },
                         ].map((product, index) => (
                             <Col md={3} key={index}>
                                 <Card className="product-card h-100">
-                                    <div className="product-badge">{product.badge}</div>
+                                    <div className="product-badge">{product.author}</div>
                                     <div style={{ overflow: 'hidden' }}>
                                         <Card.Img variant="top" src={product.image} />
                                     </div>
@@ -147,10 +180,10 @@ function Landing() {
                                         <div className="product-rating">
                                             <FontAwesomeIcon icon={faStar} className="text-warning" />
                                             <span className="product-rating-number">{product.rating}</span>
-                                            <span className="product-rating-count">({product.reviews})</span>
+                                            {/* <span className="product-rating-count">({product.reviews})</span> */}
                                         </div>
                                         <div className="product-price">₹{product.price}</div>
-                                        <Button variant="primary" className="w-100">
+                                        <Button variant="primary" className="w-100" onClick={() => navigate('/buy-now')}>
                                             Buy Now <FontAwesomeIcon icon={faArrowRight} className="ms-2" />
                                         </Button>
                                     </Card.Body>
@@ -159,10 +192,10 @@ function Landing() {
                         ))}
                     </Row>
                 </Container>
-            </section>
+            </ section>
 
             {/* Features Section */}
-            <section className="section-padding" id="features">
+            <section section className="section-padding" id="features" >
                 <Container>
                     <h2 className="section-title">Why Choose Us</h2>
                     <p className="section-subtitle">Experience the difference with our premium digital products and exceptional service</p>
@@ -183,7 +216,7 @@ function Landing() {
                         ))}
                     </Row>
                 </Container>
-            </section>
+            </section >
 
             {/* Testimonials Section */}
             {/* <section className="section-padding" id="testimonials">
@@ -248,7 +281,7 @@ function Landing() {
             </section>
 
             {/* Footer */}
-          
+
         </>
     )
 }
